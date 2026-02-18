@@ -1,0 +1,9 @@
+endpoints:
+  - name: leantime
+    url: http://http://lks-oss-lb-1452759831.us-east-1.elb.amazonaws.com
+    interval: 30s
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: github
+        description: "Sensei, Leantime is down! Please check and fix it."
